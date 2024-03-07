@@ -1,113 +1,272 @@
+
+import { NavigationMenuDemo } from "@/components/nav-bar";
 import Image from "next/image";
+import { 
+  MagnifyingGlassIcon,
+  MobileIcon,
+  EnvelopeClosedIcon,
+  SewingPinFilledIcon
+} from '@radix-ui/react-icons';
+import BigText from "@/components/big-text";
+import PaperCard from "@/components/paper-card";
+import MediumText from "@/components/medium-text";
+import { CarouselPlugin } from "@/components/carousel";
+import { InputWithButton } from "@/components/form";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+  <div className="h-dvh">
+    <div className="flex justify-around items-center">
+      <Image 
+        src={'/logo.png'}
+        alt={'logo'}
+        width={80}
+        height={80}
+      />
+      <NavigationMenuDemo />
+      <div className="">
+        <MagnifyingGlassIcon />
       </div>
+      <div className="">
+      </div>
+    </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+    {/* slider section */}
+    
+    <div className="w-dvw h-[33.302rem] overflow-clip flex justify-center">
+      <Image 
+        src={'/garbage.jpg'}
+        alt="service"
+        width={1300}
+        height={300}
+        quality={100}
+        className=" object-cover rounded-lg py-2 shadow-lg"
+      />
+    </div>
+
+    {/* first column */}
+    <div className="grid grid-cols-2 gap-2 h-[33.302rem] items-center mx-4">
+     <div className='p-6'>
+       <BigText text="Recycle on the Go with the D-Waste App" />
+       <p 
+        className='py-6'
+       >Recycling does not have to be hard to start with. 
+       Are you interested in signing up for a recycling service closer to your home or workplace? 
+       We just have a solution for you. We pick up your recyclables for recycling</p>
+       <div>
+
+        {/* playstore links */}
+        <Image 
+          src={'/playstore.jpeg'}
+          alt="playstore links"
+          height={100}
+          width={350}
+          quality={100}
         />
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+     </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+     {/* second column */}
+     <div className='px-6'>
+        <BigText text="Image goes here" />
+     </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      
+    </div>
+
+    {/* 2nd image */}
+    <div className='bg-violet-600 w-dvw h-[31.625rem] overflow-hidden'>
+      <Image 
+          src={'/image2.jpeg'}
+          alt="waste management"
+          width={1300}
+          height={300}
+          quality={100}
+          className=" object-cover rounded-lg shadow-lg"
+        />
+    </div>
+
+    {/* first column */}
+    <div className='mb-4 items-center h-[33.302rem] grid grid-cols-2 mx-4 gap-2'>
+      <div className='p-6'>
+        <BigText text='Waste Disposal & Recycling'/>
+        <p
+          className='py-6'
+        >We collect your household & commercial waste + 
+         recyclables reliably and sustainably through the use of our own trucks,
+         our mobile app, and our network of partner local waste collectors & haulers. 
+         Download the D-Waste Mobile app to get started.</p>
+
+        {/* playstore links */}
+        <Image 
+          src={'/playstore.jpeg'}
+          alt="playstore links"
+          height={100}
+          width={350}
+          quality={100}
+        />
       </div>
-    </main>
+
+      {/* 2nd column */}
+      <div className='mx-12'>
+        <Image 
+        src={'/person.png'}
+        alt="person carrying waste bags"
+        width={980}
+        height={384}
+        quality={100}
+        />
+      </div>
+
+
+    </div>
+
+    {/* facts section */}
+
+    <div className='h-[33.302rem] mt-8'>
+      <div className='mb-6 mt-14 text-center'>
+        <BigText text='Key Facts'/>
+      </div>
+      <div className=' grid grid-cols-4 items-start mx-28 pt-6'>
+        <div>
+        <PaperCard 
+          title="PARTNER WASTE COLLECTORS"
+          duration={4}
+          endValue={30}
+          
+        />
+        </div>
+        <div>
+        <PaperCard 
+          title="TONNES OF PLASTIC WASTE RECYCLED"
+          duration={4}
+          endValue={50}
+        />
+        </div>
+        <div>
+        <PaperCard 
+          title="TONNES OF HOUSEHOULD WASTE COLLECTED PER DAY"
+          duration={4}
+          endValue={30}
+        />
+        </div>
+        <div>
+        <PaperCard
+                  title=" THOUSAND HOUSEHOLDS SERVED"
+                  duration={4}
+                  endValue={10}
+        />
+        </div>
+      </div>
+    </div>
+    
+    {/* partners section */}
+    <div className='my-10 mx-10 h-[36rem]'>
+      <div className='text-center'>
+        <BigText 
+          text="Our Partners"
+        />
+        <MediumText 
+          text="Proud to be associated with the following organisations
+          in helping us achieve zero waste communities"
+        />
+      </div>
+      <div className='flex justify-center'>
+        <CarouselPlugin />
+      </div>
+    </div>
+
+    {/* newsletter */}
+    <div className=' bg-violet-100 h-[30rem] grid grid-cols-2 items-center'>
+      <div>
+        <BigText  text="Subscribe to our Newsletter"/>
+      </div>
+
+      <div>
+        <InputWithButton />
+
+      </div>
+      
+    </div>
+    
+    {/* footer */}
+    <footer className="h-[20rem]">
+      <div className="h-[15rem] grid grid-cols-4">
+        <div>
+          <Image 
+          src={'/logo.png'}
+          alt={'logo'}
+          width={80}
+          height={80}
+          />
+          <div className='flex'>
+            <MobileIcon/>
+            <p>0792775784</p>
+          </div>
+          <div className='flex'>
+            <EnvelopeClosedIcon/>
+            <p>danleywaste@gmail.com</p>
+          </div>
+          <div className='flex'>
+            <SewingPinFilledIcon/>
+            <p>Nairobi West</p>
+          </div>
+        </div>
+
+        <div>
+          <h2>Services</h2>
+          <Link href={'/services/home'}>
+            Trash Collection & Recycling for Home
+          </Link>
+          <Link href={'/services/business'}>
+            Waste Disposal & Recycling for Business
+          </Link>
+          <Link href={'/services/recycling'}>
+            Plastic Waste Recycling
+          </Link>
+          <Link href={'/services'}>
+            Smart Waste solutions
+          </Link>
+        </div>
+
+        <div>
+          <h2>Company</h2>
+          <Link href={'/services/home'}>
+            Our Story
+          </Link>
+          <Link href={'/company/mission'}>
+            Our Mission
+          </Link>
+          <Link href={'/company/objectives'}>
+            Our Core Objectives
+          </Link>
+          <Link href={'/company/values'}>
+            Our Values
+          </Link>
+          <Link href={'/company/team'}>
+            Our Team
+          </Link>
+        </div>
+
+        <div>
+          <h2>Get started</h2>
+          Image
+        </div>
+        
+      </div>
+
+      <div className='flex justify-center'>
+        <p>Copyright 2024</p>
+      </div>
+
+    </footer>
+
+
+    
+  </div>
   );
 }
