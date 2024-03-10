@@ -30,12 +30,12 @@ const PaperCard: React.FC<PaperCardProps> = ({ title, endValue, duration }) => {
   
     return (
       <Stack direction="row" spacing={2} ref={ref}>
-        <DataPaper square={false} elevation={4} className='text-2xl'>
+        <DataPaper square={false} elevation={1} className='text-2xl'>
           { <div className='grid items-center'>
-             {inView && <CountUp end={endValue} duration={duration} />}
+             {inView && <CountUp end={endValue} duration={duration} className='text-3xl font-black italic text-gray-800'/>}
              {title && 
                <div 
-                  className=' text-transparent text-lg bg-gradient-to-r from-gray-400 to-blue-400 via-violet-400 bg-clip-text'
+                  className='italic text-gray-800'
                 >
                   {title}
                 </div>

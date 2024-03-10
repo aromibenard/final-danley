@@ -9,10 +9,16 @@ import {
 } from '@radix-ui/react-icons';
 import BigText from "@/components/big-text";
 import PaperCard from "@/components/paper-card";
-import MediumText from "@/components/medium-text";
 import { CarouselPlugin } from "@/components/carousel";
 import { InputWithButton } from "@/components/form";
 import Link from "next/link";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { AnimatedImage } from "@/components/animated-image";
+import CopyrightIcon from '@mui/material/Icon';
+import { AppStoreButton } from "@/components/ios-appstore-button";
+import { PlaystoreButton } from "@/components/playstore-button";
+import Partners from "@/components/partners";
+
 
 
 export default function Home() {
@@ -34,45 +40,39 @@ export default function Home() {
     </div>
 
     {/* slider section */}
-    
-    <div className="w-dvw h-[33.302rem] overflow-clip flex justify-center">
-      <Image 
-        src={'/garbage.jpg'}
-        alt="service"
-        width={1300}
-        height={300}
-        quality={100}
-        className=" object-cover rounded-lg py-2 shadow-lg"
-      />
-    </div>
+    <AnimatedImage/>
 
     {/* first column */}
-    <div className="grid grid-cols-2 gap-2 h-[33.302rem] items-center mx-4">
-     <div className='p-6'>
-       <BigText text="Recycle on the Go with the D-Waste App" />
-       <p 
-        className='py-6'
-       >Recycling does not have to be hard to start with. 
-       Are you interested in signing up for a recycling service closer to your home or workplace? 
-       We just have a solution for you. We pick up your recyclables for recycling</p>
-       <div>
+    <div className="grid grid-cols-2 gap-2 h-[33.302rem] items-center mx-6">
+      <div className='p-6'>
+        <BigText text="Recycle on the Go with the D-Waste App" />
+        <p 
+          className='py-6'
+        >Recycling does not have to be hard to start with. 
+        Are you interested in signing up for a recycling service closer to your home or workplace? 
+        We just have a solution for you. We pick up your recyclables for recycling</p>
 
         {/* playstore links */}
-        <Image 
-          src={'/playstore.jpeg'}
-          alt="playstore links"
-          height={100}
-          width={350}
-          quality={100}
-        />
-      </div>
-
-
+        <div className="flex mx-2 justify-around">
+          <div>
+            <AppStoreButton/>
+          </div>
+          <div>
+            <PlaystoreButton/>
+          </div>
+        </div>
      </div>
 
      {/* second column */}
-     <div className='px-6'>
-        <BigText text="Image goes here" />
+     <div className='mb-4'>
+      <AspectRatio ratio={16/9}>   
+          <Image 
+              src={'/appdemo.png'}
+              alt='Link to apple store'
+              height={550}
+              width={500}
+              className='overflow-hidden object-cover pb-6'/>
+          </AspectRatio>
      </div>
 
       
@@ -80,18 +80,19 @@ export default function Home() {
 
     {/* 2nd image */}
     <div className='bg-violet-600 w-dvw h-[31.625rem] overflow-hidden'>
-      <Image 
-          src={'/image2.jpeg'}
-          alt="waste management"
-          width={1300}
-          height={300}
-          quality={100}
-          className=" object-cover rounded-lg shadow-lg"
-        />
+      <AspectRatio ratio={16/9}>   
+          <Image 
+              src={'/secondimg.png'}
+              alt='Link to apple store'
+              height={500}
+              width={180}
+              quality={100}
+              className='overflow-hidden w-full object-cover'/>
+      </AspectRatio>
     </div>
 
     {/* first column */}
-    <div className='mb-4 items-center h-[33.302rem] grid grid-cols-2 mx-4 gap-2'>
+    <div className='mb-4 items-center h-[33.302rem] grid grid-cols-2 mx-6 gap-3'>
       <div className='p-6'>
         <BigText text='Waste Disposal & Recycling'/>
         <p
@@ -102,24 +103,27 @@ export default function Home() {
          Download the D-Waste Mobile app to get started.</p>
 
         {/* playstore links */}
-        <Image 
-          src={'/playstore.jpeg'}
-          alt="playstore links"
-          height={100}
-          width={350}
-          quality={100}
-        />
+       <div className="flex justify-around">
+          <div>
+            <AppStoreButton />
+          </div>
+
+          <div>
+            <PlaystoreButton />
+          </div>
+        </div>
       </div>
 
       {/* 2nd column */}
-      <div className='mx-12'>
-        <Image 
-        src={'/person.png'}
-        alt="person carrying waste bags"
-        width={980}
-        height={384}
-        quality={100}
-        />
+      <div className=''>
+        <AspectRatio ratio={4/3}>   
+         <Image 
+            src={'/garbageman.png'}
+            alt='man carrying garbage bag'
+            height={400}
+            width={300}
+            className='overflow-hidden object-cover'/>
+        </AspectRatio>
       </div>
 
 
@@ -127,36 +131,36 @@ export default function Home() {
 
     {/* facts section */}
 
-    <div className='h-[33.302rem] mt-8'>
+    <div className='h-[30rem] mt-8'>
       <div className='mb-6 mt-14 text-center'>
         <BigText text='Key Facts'/>
       </div>
-      <div className=' grid grid-cols-4 items-start mx-28 pt-6'>
+      <div className=' grid grid-cols-4 items-start lg:mx-28 md:mx-10 '>
         <div>
-        <PaperCard 
-          title="PARTNER WASTE COLLECTORS"
-          duration={4}
-          endValue={30}
-          
-        />
+          <PaperCard 
+            title="Partner Waste Collectors"
+            duration={4}
+            endValue={30}
+            
+          />
         </div>
         <div>
         <PaperCard 
-          title="TONNES OF PLASTIC WASTE RECYCLED"
+          title="Tonnes of Plastic Waste Recycled"
           duration={4}
           endValue={50}
         />
         </div>
         <div>
         <PaperCard 
-          title="TONNES OF HOUSEHOULD WASTE COLLECTED PER DAY"
+          title="Tonnes of Household Waste Collected Per Day"
           duration={4}
           endValue={30}
         />
         </div>
         <div>
         <PaperCard
-                  title=" THOUSAND HOUSEHOLDS SERVED"
+                  title=" Thousand Households Served"
                   duration={4}
                   endValue={10}
         />
@@ -165,24 +169,22 @@ export default function Home() {
     </div>
     
     {/* partners section */}
-    <div className='my-10 mx-10 h-[36rem]'>
+    <div className=' mx-10 h-[33rem]'>
       <div className='text-center'>
         <BigText 
           text="Our Partners"
         />
-        <MediumText 
-          text="Proud to be associated with the following organisations
-          in helping us achieve zero waste communities"
-        />
+        <p className="py-2">Proud to be associated with the following organisations
+          in helping us achieve zero waste communities</p>
       </div>
       <div className='flex justify-center'>
-        <CarouselPlugin />
+        <Partners />
       </div>
     </div>
 
     {/* newsletter */}
-    <div className=' bg-violet-100 h-[30rem] grid grid-cols-2 items-center'>
-      <div>
+    <div className=' bg-violet-300 h-[20rem] grid grid-cols-2 items-center'>
+      <div className='mx-6'>
         <BigText  text="Subscribe to our Newsletter"/>
       </div>
 
@@ -194,79 +196,94 @@ export default function Home() {
     </div>
     
     {/* footer */}
-    <footer className="h-[20rem]">
-      <div className="h-[15rem] grid grid-cols-4">
-        <div>
+    <footer className="h-[15rem] bg-purple-600">
+      <div className="h-[12rem] grid grid-cols-3">
+        <div className='px-6 h-11/12'>
           <Image 
           src={'/logo.png'}
           alt={'logo'}
           width={80}
           height={80}
           />
-          <div className='flex'>
+          <div className='flex space-x-2'>
             <MobileIcon/>
-            <p>0792775784</p>
+            <p>0700356545</p>
           </div>
-          <div className='flex'>
+          <div className='flex space-x-2'>
             <EnvelopeClosedIcon/>
             <p>danleywaste@gmail.com</p>
           </div>
-          <div className='flex'>
+          <div className='flex space-x-2'>
             <SewingPinFilledIcon/>
             <p>Nairobi West</p>
           </div>
         </div>
 
-        <div>
-          <h2>Services</h2>
-          <Link href={'/services/home'}>
-            Trash Collection & Recycling for Home
-          </Link>
-          <Link href={'/services/business'}>
-            Waste Disposal & Recycling for Business
-          </Link>
-          <Link href={'/services/recycling'}>
-            Plastic Waste Recycling
-          </Link>
-          <Link href={'/services'}>
-            Smart Waste solutions
-          </Link>
+        <div className='py-4 mx-4'>
+          <h2 className='font-bold py-2'>Services</h2>
+          <div className="hover:underline underline-offset-2">
+            <Link href={'/services/home'} >
+              Trash Collection & Recycling for Home
+            </Link>
+          </div>
+          <div className="hover:underline underline-offset-2">
+            <Link href={'/services/business'}>
+              Waste Disposal & Recycling for Business
+            </Link>
+          </div>
+          <div className="hover:underline underline-offset-2">
+            <Link href={'/services/recycling'}>
+              Plastic Waste Recycling
+            </Link>
+          </div>
+          <div className="hover:underline underline-offset-2">
+            <Link href={'/services'}>
+              Smart Waste solutions
+            </Link>
+          </div>
         </div>
 
-        <div>
-          <h2>Company</h2>
-          <Link href={'/services/home'}>
-            Our Story
-          </Link>
-          <Link href={'/company/mission'}>
-            Our Mission
-          </Link>
-          <Link href={'/company/objectives'}>
-            Our Core Objectives
-          </Link>
-          <Link href={'/company/values'}>
-            Our Values
-          </Link>
-          <Link href={'/company/team'}>
-            Our Team
-          </Link>
-        </div>
-
-        <div>
-          <h2>Get started</h2>
-          Image
+        <div className='py-4 mx-4'>
+          <h2 className='py-2 font-bold'>Company</h2>
+          <div className="hover:underline underline-offset-2">
+            <Link href={'/services/home'}>
+              Our Story
+            </Link>
+          </div>
+          <div className="hover:underline underline-offset-2" >
+            <Link href={'/company/mission'}>
+              Our Mission
+            </Link>
+          </div>
+          <div className="hover:underline underline-offset-2">
+            <Link href={'/company/objectives'}>
+              Our Core Objectives
+            </Link>
+          </div>
+          <div className="hover:underline underline-offset-2" >
+            <Link href={'/company/values'}>
+              Our Values
+            </Link>
+          </div>
+          <div className="hover:underline underline-offset-2">
+            <Link href={'/company/team'}>
+              Our Team
+            </Link>
+          </div>
         </div>
         
       </div>
-
-      <div className='flex justify-center'>
-        <p>Copyright 2024</p>
+      <div className='flex justify-center my-6'>
+        <CopyrightIcon/>
+        <p className=''>Copyright 2024</p>
       </div>
+
 
     </footer>
 
 
-    
+
   </div>
+  
   );
 }
