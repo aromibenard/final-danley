@@ -12,7 +12,7 @@ export const AnimatedImage = () => {
 
   const zoomAnimation = useSpring({
     transform: zoomed ? 'scale(1.2)' : 'scale(1)',
-    config: {...config.slow, duration: 5000 }
+    config: {...config.slow, duration: 7000 }
   });
 
   const overlayStyle:React.CSSProperties = {
@@ -38,7 +38,7 @@ export const AnimatedImage = () => {
         className='object-cover w-full overflow-clip h-[30rem]' 
       />
       <div style={overlayStyle}>
-         <p className="text-4xl font-bold">Building zero waste communities, One city at a time</p>
+         <p className="text-4xl font-bold">Building Zero Waste Communities, One City at a time</p>
       </div>
     </div>
   );

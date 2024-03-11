@@ -4,7 +4,6 @@ import * as React from "react"
 import Link from "next/link"
 
 import { cn } from "@/lib/utils"
-// import { Icons } from "@/components/icons"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -18,19 +17,19 @@ import {
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Hotels & Hospitality",
-    href: "/services/primitives/alert-dialog",
+    href: "/industries/hospitality",
     description:
       "Garbage collection & Recycling Services for your Hospitality + hotel waste",
   },
   {
     title: "Restaurants & Food Services",
-    href: "/docs/primitives/hover-card",
+    href: "/industries/restaurants",
     description:
       "Garbage collection & Recycling Services for your Restaurant or Food Service",
   },
   {
     title: "Grocery Stores",
-    href: "/docs/primitives/progress",
+    href: "/industries/groceries",
     description:
       "Garbage collection & Recycling Services for your Grocery Store",
   }
@@ -39,25 +38,25 @@ const components: { title: string; href: string; description: string }[] = [
 const components2: { title: string; href: string; description: string }[] = [
     {
       title: "Our Story",
-      href: "/services/primitives/alert-dialog",
+      href: "/company/about",
       description:
-        "Garbage collection & Recycling Services for your Hospitality + hotel waste",
+        "About D Waste",
     },
     {
       title: "Our Mission",
-      href: "/docs/primitives/hover-card",
+      href: "/company/mission",
       description:
-        "Garbage collection & Recycling Services for your Restaurant or Food Service",
+        "D Waste Mission",
     },
     {
       title: "Our Team & Leadership",
-      href: "/docs/primitives/progress",
+      href: "/company/team",
       description:
         "Garbage collection & Recycling Services for your Grocery Store",
     },
     {
         title: "Our Core Objectives",
-        href: "/docs/primitives/progress",
+        href: "/company/objectives",
         description:
           "Garbage collection & Recycling Services for your Grocery Store",
       },
@@ -122,13 +121,13 @@ export function NavigationMenuDemo() {
                   </a>
                 </NavigationMenuLink>
               </li>
-              <ListItem href="/docs" title="For Households">
+              <ListItem href="/services/households" title="For Households">
               Garbage collection & Recycling Services for Residential clients
               </ListItem>
-              <ListItem href="/docs/installation" title="For Municipality">
+              <ListItem href="/services/municipalities" title="For Municipality">
               Your communities waste + recycling solution.
               </ListItem>
-              <ListItem href="/docs/primitives/typography" title="Recycling">
+              <ListItem href="/" title="Recycling">
                 Recycling Services
               </ListItem>
             </ul>
@@ -190,7 +189,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link href="/docs" legacyBehavior passHref>
+          <Link href="/contacts" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Contact Us
             </NavigationMenuLink>
