@@ -37,7 +37,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 const components2: { title: string; href: string; description: string }[] = [
     {
-      title: "Our Story",
+      title: "About Us",
       href: "/company/about",
       description:
         "About D Waste",
@@ -50,48 +50,48 @@ const components2: { title: string; href: string; description: string }[] = [
     },
     {
       title: "Our Team & Leadership",
-      href: "/company/team",
+      href: "/",
       description:
-        "Garbage collection & Recycling Services for your Grocery Store",
+        "The professional team",
     },
     {
         title: "Our Core Objectives",
         href: "/company/objectives",
         description:
-          "Garbage collection & Recycling Services for your Grocery Store",
+          "Company objectives",
       },
       {
         title: "Our Partners",
-        href: "/docs/primitives/progress",
+        href: "/company/partners",
         description:
-          "Garbage collection & Recycling Services for your Grocery Store",
+          "our partners",
       }
 ]
 
 const components3: { title: string; href: string; description: string }[] = [
     {
       title: "Locations",
-      href: "/services/primitives/alert-dialog",
+      href: "/information/locations",
       description:
-        "Where We Collect",
+        "Learn more about the regions we operate in. ",
     },
     {
       title: "Sorting Guide",
-      href: "/docs/primitives/hover-card",
+      href: "/information/sorting",
       description:
         "Food Waste, Plastic Waste, Landfill Waste",
     },
     {
       title: "Privacy Policy",
-      href: "/docs/primitives/progress",
+      href: "/information/privacy",
       description:
-        "view",
+        "Review the privacy policy",
     },
     {
         title: "Terms of Use",
         href: "/docs/primitives/progress",
         description:
-          "View",
+          "Review the terms of use",
       },
 ]
 

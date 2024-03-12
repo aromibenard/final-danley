@@ -72,12 +72,12 @@ export default function Footer() {
             </Link>
           </div>
           <div className="hover:underline underline-offset-2" >
-            <Link href={'/company/values'}>
-              Our Values
+            <Link href={'/company/partners'}>
+              Our Partners
             </Link>
           </div>
           <div className="hover:underline underline-offset-2">
-            <Link href={'/company/team'}>
+            <Link href={'/'}>
               Our Team
             </Link>
           </div>
