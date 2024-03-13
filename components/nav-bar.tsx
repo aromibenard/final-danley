@@ -96,12 +96,36 @@ const components3: { title: string; href: string; description: string }[] = [
 ]
 
 export function NavigationMenuDemo() {
+
+  const MobileMenuItem: React.FC<{ href: string; title: string }> = ({ href, title }) => (
+    <li>
+      <NavigationMenuLink asChild>
+        <a className="block py-2 px-4 text-gray-800 hover:bg-violet-100" href={href}>
+          {title}
+        </a>
+      </NavigationMenuLink>
+    </li>
+  );
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
+        
+        {/* Hamburger Menu for Mobile Devices */}
+        <NavigationMenuItem className="md:hidden">
+          <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="p-4">
+              <MobileMenuItem href="/" title="Home" />
+              <MobileMenuItem href="/services/households" title="Services" />
+              <MobileMenuItem href="/information/locations" title="Where We Collect" />
+              <MobileMenuItem href="/contact" title="Contact Us" />
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
 
-        {/* services */}
-        <NavigationMenuItem>
+        {/* Full Navbar for Large Screens */}
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuTrigger>Services</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
@@ -135,7 +159,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         {/* industries */}
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuTrigger>Industries</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -153,7 +177,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
 
         {/* Company */}
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuTrigger>Company</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -171,7 +195,7 @@ export function NavigationMenuDemo() {
         </NavigationMenuItem>
         
         {/* Resources */}
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
@@ -188,7 +212,7 @@ export function NavigationMenuDemo() {
           </NavigationMenuContent>
         </NavigationMenuItem>
 
-        <NavigationMenuItem>
+        <NavigationMenuItem className="hidden md:block">
           <Link href="/contacts" legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               Contact Us

@@ -24,15 +24,16 @@ export default function RootLayout({
         {/* head content here */}
       </head>
       <body className={inter.className}>
-        <div className="flex justify-around items-center">
+        <div className="flex justify-between md:justify-around items-center">
           <Image 
             src={'/logo.png'}
             alt={'logo'}
             width={80}
             height={80}
+            
           />
           <NavigationMenuDemo />
-          <div className="">
+          <div className="hidden md:block">
             <MagnifyingGlassIcon />
           </div>
         </div>

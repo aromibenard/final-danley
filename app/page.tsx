@@ -1,7 +1,5 @@
 
-import { NavigationMenuDemo } from "@/components/nav-bar";
 import Image from "next/image";
-import { MagnifyingGlassIcon} from '@radix-ui/react-icons';
 import BigText from "@/components/big-text";
 import { InputWithButton } from "@/components/form";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -16,15 +14,17 @@ import KeyFacts from "@/components/facts";
 
 export default function Home() {
   return (
-  <div className="h-dvh">
+  <div className="grid h-dvh">
     
 
     {/* slider section */}
-    <AnimatedImage/>
+    <div className="w-full">
+      <AnimatedImage/>
+    </div>
 
     {/* first column */}
-    <div className="grid grid-cols-2 gap-2 h-[33.302rem] items-center mx-6">
-      <div className='p-6'>
+    <div className="grid  grid-rows-2 mx-4 md:grid-cols-2 md:gap-2 h-[33.302rem] items-center md:mx-6">
+      <div className='p-6 mx-auto'>
         <BigText text="Recycle on the Go with the D-Waste App" />
         <p 
           className='py-6'
@@ -33,7 +33,7 @@ export default function Home() {
         We just have a solution for you. We pick up your recyclables for recycling</p>
 
         {/* playstore links */}
-        <div className="flex mx-2 justify-between py-4">
+        <div className="flex flex-col justify-center space-y-4 md:mx-2 md:justify-between py-4">
           <div>
             <AppStoreButton/>
           </div>
@@ -41,38 +41,30 @@ export default function Home() {
             <PlaystoreButton/>
           </div>
         </div>
-     </div>
+        </div>
+     
 
      {/* second column */}
-     <div className='mb-4'>
+     <div className='overflow-hidden'>
       <AspectRatio ratio={16/9}>   
           <Image 
               src={'/appdemo.png'}
               alt='Link to apple store'
               height={550}
               width={500}
-              className='overflow-hidden object-cover pb-6'/>
+              className='overflow-hidden h-[19rem] object-contain md:h-full'/>
           </AspectRatio>
-     </div>
+     
+      </div>
 
       
     </div>
 
     {/* 2nd image */}
-    <div className='bg-violet-600 w-dvw h-[31.625rem] overflow-hidden'>
-      <AspectRatio ratio={16/9}>   
-          <Image 
-              src={'/secondimg.png'}
-              alt='Link to apple store'
-              height={500}
-              width={180}
-              quality={100}
-              className='overflow-hidden w-full object-cover'/>
-      </AspectRatio>
-    </div>
+
 
     {/* first column */}
-    <div className='mb-4 items-center h-[33.302rem] grid grid-cols-2 mx-6 gap-3'>
+    <div className='mb-4 items-center md:h-[33.302rem] grid grid-rows-2 md:grid-cols-2 md:mx-6 mx-4 md:gap-3'>
       <div className='p-6'>
         <BigText text='Waste Disposal & Recycling'/>
         <p
@@ -83,7 +75,7 @@ export default function Home() {
          Download the D-Waste Mobile app to get started.</p>
 
         {/* playstore links */}
-       <div className="flex justify-between py-4">
+       <div className="flex flex-col justify-center space-y-4 md:mx-2 md:justify-between py-4">
           <div>
             <AppStoreButton />
           </div>
@@ -110,7 +102,9 @@ export default function Home() {
     </div>
 
     {/* facts section */}
-    <KeyFacts />
+    <div className="mx-10">
+     <KeyFacts />
+    </div>
     
     {/* partners section */}
     <div className=' mx-10 h-[33rem]'>

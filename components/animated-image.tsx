@@ -30,7 +30,7 @@ export const AnimatedImage = () => {
   };
 
   return (
-    <div className='overflow-hidden min-w-dvw'>
+    <div className='overflow-clip min-w-dvw'>
       <animated.img
         src="/firstimg.png"
         alt="Landing Image"
@@ -38,7 +38,7 @@ export const AnimatedImage = () => {
         className='object-cover w-full overflow-clip h-[30rem]' 
       />
       <div style={overlayStyle}>
-         <p className="text-4xl font-bold">Building Zero Waste Communities, One City at a time</p>
+         <p className=" text-2xl md:text-4xl font-bold">Building Zero Waste Communities, One City at a time</p>
       </div>
     </div>
   );

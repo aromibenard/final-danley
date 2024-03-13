@@ -5,16 +5,17 @@ import PaperCard from "./paper-card"
 
 export default function KeyFacts() {
     return (
-        <div className='h-[30rem] mt-8'>
+        <div className=' mt-8'>
             <div className='mb-6 mt-14 text-center py-4'>
                 <BigText text='Key Facts'/>
             </div>
-            <div className=' grid grid-cols-4 items-start lg:mx-28 md:mx-10 '>
+            <div className=' grid  grid-rows-4 mx-auto md:grid-cols-4 items-start lg:mx-28 md:mx-10 '>
                 <div>
                     <PaperCard 
                     title="Partner Waste Collectors"
                     duration={4}
                     endValue={30}
+                    
                     
                     />
                 </div>

@@ -6,7 +6,7 @@ interface BigTextProps {
 
 const BigText: FC<BigTextProps> = ({ text }) => {
   return (
-    <h1 className='scroll-m-20 tracking-tight text-transparent text-3xl font-bold bg-gradient-to-r from-purple-500 to-violet-500 via-pink-500 bg-clip-text'>
+    <h1 className='scroll-m-20 tracking-tight text-transparent  text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-500 to-violet-500 via-pink-500 bg-clip-text'>
       {text}
     </h1>
   );

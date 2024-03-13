@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 export function PlaystoreButton() {
   return (
     <Button>
-      <DownloadIcon className="mr-2 h-4 w-4" /> Get on Google Playstore
+      <DownloadIcon className="mr-2 h-4 w-2 md:w-4" /> Get on Google Playstore
     </Button>
   )
 }
