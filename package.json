@@ -21,6 +21,7 @@
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@react-spring/web": "^9.7.3",
+    "@vercel/speed-insights": "^1.0.10",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "embla-carousel-autoplay": "^8.0.0",
