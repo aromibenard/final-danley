@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* head content here */}
+        <link rel="icon" href="/favicon.png"/>
       </head>
       <body className={inter.className}>
-        <div className="flex justify-between md:justify-around items-center">
+        <div className="flex justify-around items-center">
           <Image 
             src={'/logo.png'}
             alt={'logo'}

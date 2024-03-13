@@ -35,7 +35,7 @@ const PaperCard: React.FC<PaperCardProps> = ({ title, endValue, duration }) => {
              {inView && <CountUp end={endValue} duration={duration} className='text-3xl font-black italic text-gray-800'/>}
              {title && 
                <div 
-                  className='italic text-gray-800'
+                  className='italic text-black'
                 >
                   {title}
                 </div>

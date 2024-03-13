@@ -100,7 +100,7 @@ export function NavigationMenuDemo() {
   const MobileMenuItem: React.FC<{ href: string; title: string }> = ({ href, title }) => (
     <li>
       <NavigationMenuLink asChild>
-        <a className="block py-2 px-4 text-gray-800 hover:bg-violet-100" href={href}>
+        <a className="block py-2 px-4 text-gray-800 hover:bg-violet-200" href={href}>
           {title}
         </a>
       </NavigationMenuLink>

@@ -23,7 +23,7 @@ export default function Home() {
     </div>
 
     {/* first column */}
-    <div className="grid  grid-rows-2 mx-4 md:grid-cols-2 md:gap-2 md:h-[33.302rem] items-center md:mx-6 my-2">
+    <div className="grid  grid-rows-2 mx-4 md:grid-cols-2 md:gap-2 md:h-[34rem] items-center md:mx-6 my-2">
       <div className='p-6 mx-auto my-auto'>
         <BigText text="Recycle on the Go with the D-Waste App" />
         <p 
@@ -45,14 +45,14 @@ export default function Home() {
      
 
      {/* second column */}
-     <div className='overflow-hidden'>
+     <div className=''>
       <AspectRatio ratio={16/9}>   
           <Image 
               src={'/appdemo.png'}
               alt='Link to apple store'
               height={550}
               width={500}
-              className='overflow-hidden h-[18rem] object-contain md:h-[26rem] '/>
+              className=' h-[18rem] object-contain md:h-[26rem] '/>
           </AspectRatio>
      
       </div>
@@ -64,7 +64,7 @@ export default function Home() {
 
 
     {/* first column */}
-    <div className='  gap 2 items-center md:h-[30rem] grid grid-rows-2 md:grid-cols-2 md:mx-6 mx-4 md:gap-3'>
+    <div className='  gap 2 items-center md:h-[28rem] grid grid-rows-2 md:grid-cols-2 md:mx-6 mx-4 md:gap-3'>
       <div className='p-6'>
         <BigText text='Waste Disposal & Recycling'/>
         <p
@@ -122,7 +122,7 @@ export default function Home() {
 
     {/* newsletter */}
     <div className=' bg-violet-200 h-[13rem] md:h-[20rem] grid grid-rows-2 md:grid-cols-2 md:items-center'>
-      <div className='mx-auto md:mx-6 py-6'>
+      <div className='mx-auto md:mx-6 md:my-4 py-6'>
         <BigText  text="Subscribe to our Newsletter"/>
       </div>
 
