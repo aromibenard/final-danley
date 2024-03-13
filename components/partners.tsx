@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export default function Partners() {
     return (
-        <div className="flex lg:space-x-5 py-8 px-5 justify-center">
+        <div className="flex md:space-x-3 py-8 px-5 justify-around">
             <div className="overflow-hidden ">
                 <Image
-                    src={'/amaco.png'}
+                    src={'/kengen.png'}
                     alt='amaco'
                     height={50}
                     width={200}
@@ -25,7 +25,7 @@ export default function Partners() {
             </div>
             <div className="overflow-hidden ">
                 <Image
-                    src={'/kengen.png'}
+                    src={'/amaco.png'}
                     alt='kengen'
                     height={50}
                     width={200}
@@ -41,15 +41,7 @@ export default function Partners() {
                     className="object-contain"
                 />
             </div>
-            <div className="overflow-hidden ">
-                <Image
-                    src={'/technogen.png'}
-                    alt='amaco'
-                    height={50}
-                    width={200}
-                    className="object-contain"
-                />
-            </div>
+            
         </div>
     );
 }

@@ -53,7 +53,7 @@ import {
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="western">
-          <AccordionTrigger>Southern Region</AccordionTrigger>
+          <AccordionTrigger>Western Region</AccordionTrigger>
           <AccordionContent>
            Parklands,Westlands,
            Spring Valley,Kangemi,Rhapta Rd,Gigiri,Kyuna,Loresho,Ruaka,Uthiru,

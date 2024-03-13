@@ -9,7 +9,7 @@ export default function ObjectivesPage() {
     return(
         <div>
             {/* first grid */}
-            <div className=' grid w-full items-center lg:grid-cols-2 h-[32rem]  md:grid-cols-2  '>
+            <div className=' grid w-full items-center  md:h-[32rem]  md:grid-cols-2  '>
                 <div className='px-10'>
                     <BigText 
                         text="Our Core Objectives"/>
@@ -37,7 +37,7 @@ export default function ObjectivesPage() {
             </div>
 
             {/* second grid */}
-            <div className='my-5 h-[35rem] '>
+            <div className='my-5 md:h-[35rem] bg-violet-200'>
                 <div>
                     <div className='py-6 flex justify-center'>
                         <BigText text="Get in Touch"/>
@@ -46,7 +46,7 @@ export default function ObjectivesPage() {
                              recycling, and sustainability plans for businesses and communities. Do you need waste bins/dumpsters
                              ? We offer that too!</p>
                 </div>
-                <div className="grid p-4 lg:grid-cols-2 md:grid-cols-2 gap-2 items-center">
+                <div className="grid p-4  md:grid-cols-2 gap-2 items-center">
                     <div className="p-4">
                         <GetInTouchForm />
                     </div>

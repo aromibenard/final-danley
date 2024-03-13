@@ -9,7 +9,7 @@ export default function MissionPage() {
     return(
         <div>
             {/* first grid */}
-            <div className=' grid w-full items-center lg:grid-cols-2 h-[30rem]  md:grid-cols-2  '>
+            <div className=' grid w-full items-center  md:h-[30rem]  md:grid-cols-2  '>
                 <div className='px-10'>
                     <BigText 
                         text="Our Mission"/>
@@ -30,7 +30,7 @@ export default function MissionPage() {
             </div>
 
             {/* second grid */}
-            <div className='my-5 h-[35rem] '>
+            <div className='my-5 md:h-[35rem] bg-violet-200'>
                 <div>
                     <div className='py-6 flex justify-center'>
                         <BigText text="Get in Touch"/>

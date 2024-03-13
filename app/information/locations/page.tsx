@@ -6,7 +6,7 @@ export default function LocationsPage() {
     return (
 
             <div className='grid'>
-                <div className="mx-20 px-10 my-10">
+                <div className="md:mx-20 md:px-10 my-10 mx-10">
                     <div className='pt-5 pb-7 flex justify-center'>
                         <BigText text="Where We Collect"/>
                     </div>

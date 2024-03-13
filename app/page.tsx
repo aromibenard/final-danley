@@ -14,17 +14,17 @@ import KeyFacts from "@/components/facts";
 
 export default function Home() {
   return (
-  <div className="grid h-dvh">
+  <div className="grid md:h-dvh">
     
 
     {/* slider section */}
-    <div className="w-full">
+    <div className="w-full mb-12">
       <AnimatedImage/>
     </div>
 
     {/* first column */}
-    <div className="grid  grid-rows-2 mx-4 md:grid-cols-2 md:gap-2 h-[33.302rem] items-center md:mx-6">
-      <div className='p-6 mx-auto'>
+    <div className="grid  grid-rows-2 mx-4 md:grid-cols-2 md:gap-2 md:h-[33.302rem] items-center md:mx-6 my-2">
+      <div className='p-6 mx-auto my-auto'>
         <BigText text="Recycle on the Go with the D-Waste App" />
         <p 
           className='py-6'
@@ -52,7 +52,7 @@ export default function Home() {
               alt='Link to apple store'
               height={550}
               width={500}
-              className='overflow-hidden h-[19rem] object-contain md:h-full'/>
+              className='overflow-hidden h-[18rem] object-contain md:h-[26rem] '/>
           </AspectRatio>
      
       </div>
@@ -64,7 +64,7 @@ export default function Home() {
 
 
     {/* first column */}
-    <div className='mb-4 items-center md:h-[33.302rem] grid grid-rows-2 md:grid-cols-2 md:mx-6 mx-4 md:gap-3'>
+    <div className='  gap 2 items-center md:h-[30rem] grid grid-rows-2 md:grid-cols-2 md:mx-6 mx-4 md:gap-3'>
       <div className='p-6'>
         <BigText text='Waste Disposal & Recycling'/>
         <p
@@ -94,7 +94,7 @@ export default function Home() {
             alt='man carrying garbage bag'
             height={400}
             width={300}
-            className='overflow-hidden object-cover'/>
+            className='overflow-hidden object-cover '/>
         </AspectRatio>
       </div>
 
@@ -102,13 +102,13 @@ export default function Home() {
     </div>
 
     {/* facts section */}
-    <div className="mx-10">
+    <div className="md:smx-10 md:h-[30rem]">
      <KeyFacts />
     </div>
     
     {/* partners section */}
-    <div className=' mx-10 h-[33rem]'>
-      <div className='text-center py-4'>
+    <div className=' h-[20rem] mx-4 md:mx-10 md:h-[33rem]'>
+      <div className='text-center  py-6 md:py-4'>
         <BigText 
           text="Our Partners"
         />
@@ -121,12 +121,12 @@ export default function Home() {
     </div>
 
     {/* newsletter */}
-    <div className=' bg-violet-300 h-[20rem] grid grid-cols-2 items-center'>
-      <div className='mx-6'>
+    <div className=' bg-violet-200 h-[13rem] md:h-[20rem] grid grid-rows-2 md:grid-cols-2 md:items-center'>
+      <div className='mx-auto md:mx-6 py-6'>
         <BigText  text="Subscribe to our Newsletter"/>
       </div>
 
-      <div>
+      <div className="mx-auto">
         <InputWithButton />
 
       </div>

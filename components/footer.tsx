@@ -7,8 +7,8 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="h-[15rem] bg-purple-600">
-      <div className="h-[12rem] grid grid-cols-3">
+        <footer className="h-[35rem] md:h-[15rem] bg-violet-400">
+      <div className="  md:h-[13rem] grid md:grid-cols-3 grid-rows-3">
         <div className='px-6 h-11/12'>
           <Image 
           src={'/logo.png'}
@@ -54,13 +54,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className='py-4 mx-4'>
+        <div className='  md:py-4 mx-4'>
           <h2 className='py-2 font-bold'>Company</h2>
-          <div className="hover:underline underline-offset-2">
-            <Link href={'/company/about'}>
-              Our Story
-            </Link>
-          </div>
           <div className="hover:underline underline-offset-2" >
             <Link href={'/company/mission'}>
               Our Mission
@@ -84,9 +79,9 @@ export default function Footer() {
         </div>
         
       </div>
-      <div className='flex justify-center my-6 italic'>
-        <CopyrightIcon className="p-1 text-gray-800"/>
-        <p className='italic text-sm text-gray-800'>Copyright 2024</p>
+      <div className='flex justify-center md:my-6 italic bg-violet-400'>
+        <CopyrightIcon className="p-1 text-white"/>
+        <p className='italic text-sm text-white'>Copyright 2024</p>
       </div>
     </footer>
     );
