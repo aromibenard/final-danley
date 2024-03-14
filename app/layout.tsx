@@ -27,10 +27,11 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex justify-around items-center">
           <Image 
-            src={'/logo.png'}
+            src={'/logo2.jpg'}
             alt={'logo'}
             width={80}
-            height={80}
+            height={90}
+            className="rounded-xl p-2"
             
           />
           <NavigationMenuDemo />

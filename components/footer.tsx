@@ -10,11 +10,12 @@ export default function Footer() {
         <footer className="h-[35rem] md:h-[15rem] bg-violet-400">
       <div className="  md:h-[13rem] grid md:grid-cols-3 grid-rows-3">
         <div className='px-6 h-11/12'>
-          <Image 
-          src={'/logo.png'}
-          alt={'logo'}
-          width={80}
-          height={80}
+        <Image 
+            src={'/logo2.jpg'}
+            alt={'logo'}
+            width={80}
+            height={90}
+            className="rounded-xl p-2"
           />
           <div className='flex space-x-2'>
             <MobileIcon/>
