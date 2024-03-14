@@ -6,6 +6,7 @@ import "./globals.css";
 import Image from "next/image";
 import { NavigationMenuDemo } from "@/components/nav-bar";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,13 +27,13 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <div className="flex justify-around items-center">
-          <Image 
-            src={'/logo2.jpg'}
+        <Image 
+            src={'/Danley.png'}
             alt={'logo'}
-            width={80}
-            height={90}
-            className="rounded-xl p-2"
-            
+            width={100}
+            height={100}
+            quality={100}
+           
           />
           <NavigationMenuDemo />
           <div className="hidden md:block">
@@ -40,6 +41,8 @@ export default function RootLayout({
           </div>
         </div>
         {children}
+        <Analytics/>
+        <SpeedInsights/>
       </body>
     </html>
   );

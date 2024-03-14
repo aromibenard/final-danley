@@ -11,11 +11,12 @@ export default function Footer() {
       <div className="  md:h-[13rem] grid md:grid-cols-3 grid-rows-3">
         <div className='px-6 h-11/12'>
         <Image 
-            src={'/logo2.jpg'}
+            src={'/Danley.png'}
             alt={'logo'}
-            width={80}
-            height={90}
-            className="rounded-xl p-2"
+            width={100}
+            height={100}
+            quality={100}
+           
           />
           <div className='flex space-x-2'>
             <MobileIcon/>
